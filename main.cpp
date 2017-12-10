@@ -1,3 +1,4 @@
+#include<stdlib.h>
 #include <cstdlib> //codeblocks does not have conio.h so using this as i need clrscr();
 #include <iostream>
 using namespace std;
@@ -39,7 +40,10 @@ int main()
 }
 //outputter
 void out(){
-    system("cls");//as I cannot use clrscr(); in codeblocks
+    //Windows
+    //system("cls");//as I cannot use clrscr(); in codeblocks
+    //Linux
+    system("clear");
     instr();
     /*for (int i=0;i<25;i++){
         cout<<endl;
@@ -74,7 +78,7 @@ void xedit(int n){
 void yedit(int n){
     if(n==0||n==1||n==2||n==3||n==4||n==5||n==6||n==7||n==8){
         if(str[n]==' '){
-            str[n]='y';
+            str[n]='o';
         }else{
             cout<<"it is already occupied"<<endl<<"enter new number:  ";
             int x;
@@ -96,7 +100,7 @@ int check(){
         return 0;
     }}
     for(int i=0;i<3;i++){
-    if (str[i]=='y'&&str[i+3]=='y'&&str[i+6]=='y'){
+    if (str[i]=='o'&&str[i+3]=='o'&&str[i+6]=='o'){
         cout<<"2nd player wins!!!";
         return 0;
     }}
@@ -108,7 +112,7 @@ int check(){
     }
     }for(int i=0;i<3;i++){
         int no=3*i;
-    if (str[no]=='y'&&str[no+1]=='y'&&str[no+2]=='y'){
+    if (str[no]=='o'&&str[no+1]=='o'&&str[no+2]=='o'){
         cout<<"2nd player wins!!!";
         return 0;
     }}
@@ -116,7 +120,7 @@ int check(){
         cout<<"1st player wins!!!";
         return 0;
     }
-    if (str[0]=='y'&&str[4]=='y'&&str[8]=='y'){
+    if (str[0]=='o'&&str[4]=='o'&&str[8]=='o'){
         cout<<"2nd player wins!!!";
         return 0;
     }
@@ -124,7 +128,7 @@ int check(){
         cout<<"1st player wins!!!";
         return 0;
     }
-    if (str[2]=='y'&&str[4]=='y'&&str[6]=='y'){
+    if (str[2]=='o'&&str[4]=='o'&&str[6]=='o'){
         cout<<"2nd player wins!!!";
         return 0;
     }
