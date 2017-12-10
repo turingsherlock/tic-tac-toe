@@ -1,6 +1,6 @@
 # tic-tac-toe
 
-#For Windows users
+# For Windows users
 Comment line 46 and uncomment line 44
 Build and enjoy
 
